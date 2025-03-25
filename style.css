@@ -117,25 +117,29 @@
   }
   
   .skills-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    padding: 40px 20px;
   }
   
   .skill-box {
-    background: #1e1e2f;
-    border: 2px solid #6a5acd;
+    padding: 12px 24px;
     border-radius: 12px;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #ffffff;
+    background: linear-gradient(145deg, #2e3b4e, #1e293b);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
   
   .skill-box:hover {
-    transform: translateY(-5px) scale(1.05);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
   }
+  
   
   .skill-box h3 {
     color: #fff;
@@ -392,5 +396,165 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow */
     object-fit: cover; /* Ensures proper cropping */
   }
+
+  /* Base Navigation */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    background-color: #1e3a8a; /* Navy Blue */
+    padding: 10px 0;
+    position: relative;
+    transition: background-color 0.5s ease;
+  }
   
+  /* Navigation Links */
+  .navbar a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    position: relative;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeSlideIn 0.6s ease forwards;
+  }
+  
+  /* Staggered Animation Delay */
+  .navbar a:nth-child(1) { animation-delay: 0.1s; }
+  .navbar a:nth-child(2) { animation-delay: 0.2s; }
+  .navbar a:nth-child(3) { animation-delay: 0.3s; }
+  .navbar a:nth-child(4) { animation-delay: 0.4s; }
+  .navbar a:nth-child(5) { animation-delay: 0.5s; }
+  .navbar a:nth-child(6) { animation-delay: 0.6s; }
+  
+  /* Hover Effect: Underline Animation */
+  .navbar a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 100%;
+    height: 2px;
+    background-color: #facc15; /* Yellow */
+    transform: scaleX(0);
+    transition: transform 0.4s ease;
+  }
+  
+  .navbar a:hover::after {
+    transform: scaleX(1);
+  }
+  
+  /* Hamburger Button (Hidden by default) */
+  .hamburger {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Rotate Hamburger on Click */
+  .navbar.active .hamburger {
+    transform: rotate(90deg);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+      padding-left: 20px;
+    }
+  
+    .hamburger {
+      display: block;
+      align-self: flex-end;
+    }
+  
+    /* Hide Links Initially */
+    .navbar a {
+      display: none;
+    }
+  
+    /* Slide Links In When Active */
+    .navbar.active a {
+      display: block;
+      opacity: 0;
+      transform: translateY(-20px);
+      animation: fadeSlideIn 0.5s ease forwards;
+    }
+  
+    /* Ensure Links Appear Sequentially */
+    .navbar.active a:nth-child(1) { animation-delay: 0.1s; }
+    .navbar.active a:nth-child(2) { animation-delay: 0.2s; }
+    .navbar.active a:nth-child(3) { animation-delay: 0.3s; }
+    .navbar.active a:nth-child(4) { animation-delay: 0.4s; }
+    .navbar.active a:nth-child(5) { animation-delay: 0.5s; }
+    .navbar.active a:nth-child(6) { animation-delay: 0.6s; }
+  }
+  
+  /* Fade & Slide-In Animation */
+  @keyframes fadeSlideIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .projects-section {
+    padding: 60px 20px;
+    background: #f3f4f6; 
+    text-align: center;
+  }
+  
+  .projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 40px 20px;
+  }
+  
+  .project-card {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    padding: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .project-card h3 {
+    font-size: 1.5rem;
+    color: #1e3a8a;
+    margin-bottom: 12px;
+  }
+  
+  .project-card p {
+    font-size: 1rem;
+    color: #4b5563;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  .project-card .btn {
+    display: inline-block;
+    text-decoration: none;
+    background: #1e3a8a;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+  }
+  
+  .project-card .btn:hover {
+    background: #172554;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  }
   

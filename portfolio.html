@@ -10,14 +10,15 @@
 <body>
   <header>
     <div class="logo">Portfolio</div>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#education">Education</a>
-      <a href="#contact">Contact</a>
-      <a href="https://github.com/thatg33kyguy" target="_blank" class="github-btn">Github Profile</a>
-    </nav>
+    <nav class="navbar">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+        <a href="https://github.com/thatg33kyguy" target="_blank">Github Profile</a>
+        <button class="hamburger" aria-label="Toggle Navigation">☰</button>
+      </nav>
   </header>
 
   <main>
@@ -60,7 +61,40 @@
 
     <section id="projects">
       <h2>Projects</h2>
-      <div id="projects-container" class="projects"></div>
+      <div class="projects-container">
+        <!-- Spotify Clone -->
+        <div class="project-card">
+          <h3>Spotify Clone</h3>
+          <p>A frontend clone of Spotify with responsive design and dynamic UI.</p>
+          <p><strong>Tech Stack:</strong> HTML, CSS</p>
+          <a href="https://github.com/thatg33kyguy/Spotify-Clone" target="_blank" class="btn">GitHub</a>
+        </div>
+      
+        <!-- Stock Trading Platform -->
+        <div class="project-card">
+          <h3>Stock Trading Platform</h3>
+          <p>A simulation platform to practice virtual stock trading in real-time.</p>
+          <p><strong>Tech Stack:</strong> JavaScript, Node.js</p>
+          <a href="https://github.com/thatg33kyguy/stock_trading_platform" target="_blank" class="btn">GitHub</a>
+        </div>
+      
+        <!-- Todo Using REST API -->
+        <div class="project-card">
+          <h3>Todo Using REST API</h3>
+          <p>A RESTful API-based to-do list app with CRUD functionality.</p>
+          <p><strong>Tech Stack:</strong> JavaScript, Node.js, Express</p>
+          <a href="https://github.com/thatg33kyguy/TodoUsingRESTAPI" target="_blank" class="btn">GitHub</a>
+        </div>
+      
+        <!-- My Portfolio -->
+        <div class="project-card">
+          <h3>My Portfolio</h3>
+          <p>A personal portfolio showcasing my skills and projects with a responsive design.</p>
+          <p><strong>Tech Stack:</strong> HTML, CSS, JavaScript</p>
+          <a href="https://github.com/thatg33kyguy/My_Portfolio" target="_blank" class="btn">GitHub</a>
+        </div>
+      </div>
+      
     </section>
 
     <section id="education">
