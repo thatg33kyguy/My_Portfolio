@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rajprateem Nath - Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="logo">Portfolio</div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+      <a href="https://github.com/thatg33kyguy" target="_blank" class="github-btn">Github Profile</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="about" class="hero">
+      <div class="hero-content">
+        <h1>Hi, I am<br> Rajprateem Nath</h1>
+        <p>I am a <span id="dynamic-text">Web Developer</span></p>
+        <p>I am a passionate and driven individual with sheer interest in competitive programming and web development. With a focus on solving complex problems and crafting seamless digital experiences, I am always eager to learn and grow.</p>
+        <a href="https://drive.google.com/file/d/1rO9OTTnT83K5gZpXtWUNfI9vZCiEuhjs/view?usp=sharing" target="_blank" class="btn">Check Resume</a>
+      </div>
+      <div class="hero-image">
+        <img src="images/myphoto.jpg" alt="Rajprateem Nath" class="profile-pic">
+      </div>
+      
+      
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <p>I've been working on a series of skills for the past one year, some of them are mentioned below.</p>
+      <div class="skills-container">
+        <div class="skill-box">
+          <h3>Frontend</h3>
+          <p>HTML, CSS, JavaScript</p>
+        </div>
+        <div class="skill-box">
+          <h3>Backend</h3>
+          <p>Node.js, Express.js</p>
+        </div>
+        <div class="skill-box">
+          <h3>Database</h3>
+          <p>MongoDB, MySQL</p>
+        </div>
+        <div class="skill-box">
+          <h3>Competitive Programming</h3>
+          <p>C, C++, Problem Solving</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div id="projects-container" class="projects"></div>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <ul class="education">
+        <li><strong>Bachelor of Technology (ECE)</strong> - NIT Silchar (2022 - 2026)</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Contact Me</h2>
+      <form class="contact-form" onsubmit="validateForm(event)">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="email" id="email" placeholder="Your Email" required>
+        <textarea id="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+      <div class="social-links">
+        <a href="https://github.com/thatg33kyguy" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/rajprateemnath30786a252" target="_blank">LinkedIn</a>
+        <a href="https://codeforces.com/profile/rajprateem" target="_blank">Codeforces</a>
+        <a href="https://leetcode.com/that_geeky_guy" target="_blank">LeetCode</a>
+        <a href="https://drive.google.com/file/d/1rO9OTTnT83K5gZpXtWUNfI9vZCiEuhjs/view?usp=sharing" target="_blank">Resume</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Rajprateem Nath. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
